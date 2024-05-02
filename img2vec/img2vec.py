@@ -3,9 +3,6 @@ from keras.api.applications.vgg19 import VGG19, preprocess_input
 from sklearn.metrics.pairwise import cosine_similarity
 import numpy as np
 import os
-import cv2
-
-# models wearing clothes, gloves, crop tops
 
 class Img2Vec:
 
@@ -63,39 +60,39 @@ class Img2Vec:
 # *************************************************************************************
 
 # Print similarities of all images in testimages folder
-img2vec = Img2Vec()
+# img2vec = Img2Vec()
 
 # print(os.getcwd())
-folder_path = "../img2vec/testimages" # "./img2vec/testimages"
-image_files = os.listdir(folder_path) # list of all files
-image_embeddings = []
-image_names = []
-similar_pairs = []
+# folder_path = "../img2vec/testimages" # "./img2vec/testimages"
+# image_files = os.listdir(folder_path) # list of all files
+# image_embeddings = []
+# image_names = []
+# similar_pairs = []
 
-for img_file in image_files:
+# for img_file in image_files:
 
-    # Construct the full path to each image in the testimages file
-    # then load the image and generate its embedding
-    img_path = os.path.join(folder_path, img_file)
-    image = img2vec.load_image(img_path)
-    image_embedding = img2vec.get_image_embedding(image)
+#     Construct the full path to each image in the testimages file
+#     then load the image and generate its embedding
+#     img_path = os.path.join(folder_path, img_file)
+#     image = img2vec.load_image(img_path)
+#     image_embedding = img2vec.get_image_embedding(image)
 
-    # add the embedding and file name to their respective lists
-    image_embeddings.append(image_embedding)
-    image_names.append(img_file)
+#     add the embedding and file name to their respective lists
+#     image_embeddings.append(image_embedding)
+#     image_names.append(img_file)
 
-print("\nSimilarity Scores: \n")
+# print("\nSimilarity Scores: \n")
 
 # Calculate and print the similiarity scores for each pair of images
-for i in range(len(image_embeddings)):
-    for j in range(i+1, len(image_embeddings)):
-        similarity_score = img2vec.calculate_similarity(image_embeddings[i], image_embeddings[j])
-        print(f"{image_names[i]} vs {image_names[j]} - similarity is {similarity_score[0][0]* 100:.4f}%")
+# for i in range(len(image_embeddings)):
+#     for j in range(i+1, len(image_embeddings)):
+#         similarity_score = img2vec.calculate_similarity(image_embeddings[i], image_embeddings[j])
+#         print(f"{image_names[i]} vs {image_names[j]} - similarity is {similarity_score[0][0]* 100:.4f}%")
 
-        if (similarity_score[0][0]* 100) > 65:
-            similar_pairs.append((image_names[i], image_names[j]))
+#         if (similarity_score[0][0]* 100) > 65:
+#             similar_pairs.append((image_names[i], image_names[j]))
 
-print("\nSimilar Items: \n")
+# print("\nSimilar Items: \n")
 # Print the pairs of similar items
-for pair in similar_pairs:
-    print(f"{pair[0]} and {pair[1]} are similar!")
+# for pair in similar_pairs:
+#     print(f"{pair[0]} and {pair[1]} are similar!")
