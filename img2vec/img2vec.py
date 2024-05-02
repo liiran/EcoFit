@@ -46,21 +46,21 @@ class Img2Vec:
 
 
 # Print similarities of all images in testimages folder
-img2vec = Img2Vec()
+# img2vec = Img2Vec()
 
-folder_path = "./img2vec/testimages"
-image_files = os.listdir(folder_path)
-image_embeddings = []
-image_names = []
-for img_file in image_files:
-    img_path = os.path.join(folder_path, img_file)
-    image = img2vec.load_image(img_path)
-    image_embedding = img2vec.get_image_embedding(image)
-    image_embeddings.append(image_embedding)
-    image_names.append(img_file)
+# folder_path = "./img2vec/testimages"
+# image_files = os.listdir(folder_path)
+# image_embeddings = []
+# image_names = []
+# for img_file in image_files:
+#     img_path = os.path.join(folder_path, img_file)
+#     image = img2vec.load_image(img_path)
+#     image_embedding = img2vec.get_image_embedding(image)
+#     image_embeddings.append(image_embedding)
+#     image_names.append(img_file)
 
-print("Similarity Scores:")
-for i in range(len(image_embeddings)):
-    for j in range(i+1, len(image_embeddings)):
-        similarity_score = img2vec.calculate_similarity(image_embeddings[i], image_embeddings[j])
-        print(f"{image_names[i]} vs {image_names[j]}: {similarity_score[0][0]:.4f}")
+# print("Similarity Scores:")
+# for i in range(len(image_embeddings)):
+#     for j in range(i+1, len(image_embeddings)):
+#         similarity_score = img2vec.calculate_similarity(image_embeddings[i], image_embeddings[j])
+#         print(f"{image_names[i]} vs {image_names[j]}: {similarity_score[0][0]:.4f}")
