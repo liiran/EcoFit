@@ -1,0 +1,58 @@
+{
+    "shirts": {
+        "paka-shirt1.jpeg": "https://www.pakaapparel.com/products/lightweight-performance-crew",
+        "paka-shirt2.jpeg": "https://www.pakaapparel.com/products/the-cusco-1",
+        "paka-shirt3.jpeg": "https://www.pakaapparel.com/products/the-costa",
+        "paka-shirt4.jpeg": "https://www.pakaapparel.com/products/mens-baselayer",
+        "paka-shirt5.jpeg": "https://www.pakaapparel.com/products/mens-tee",
+        "paka-shirt6.jpeg": "https://www.pakaapparel.com/products/graphic-tees-placeholder",
+        "paka-shirt7.jpeg": "https://www.pakaapparel.com/products/sebastian-says-tee",
+        "paka-shirt8.jpeg": "https://www.pakaapparel.com/products/explore-peru-shirt",
+        "paka-shirt9.jpeg": "https://www.pakaapparel.com/products/womens-tee",
+        "paka-shirt10.jpeg": "https://www.pakaapparel.com/products/womens-v-neck",
+        "paka-shirt11.jpeg": "https://www.pakaapparel.com/products/womens-baselayer",
+        "paka-shirt12.jpeg": "https://www.pakaapparel.com/products/womens-baselayer?variant=39689856155732",
+        "paka-shirt13.jpeg": "https://www.pakaapparel.com/products/womens-tee?variant=39410487754836",
+        "paka-shirt14.jpeg": "https://www.pakaapparel.com/products/womens-tee?variant=40051381928020",
+        "paka-shirt15.jpeg": "https://www.pakaapparel.com/products/sebastian-baselayer"
+    },
+    "pants": {
+        "paka-pants1.jpeg": "https://www.pakaapparel.com/products/mens-everyday-joggers",
+        "paka-pants2.jpeg": "https://www.pakaapparel.com/products/mens-everyday-joggers?variant=40139306074196",
+        "paka-pants3.jpeg": "https://www.pakaapparel.com/products/womens-everyday-joggers?variant=40139075649620"
+    },
+    "shorts": {
+        "paka-shorts1.jpeg": "https://www.pakaapparel.com/products/womens-terry-shorts?variant=39761193697364",
+        "paka-shorts2.jpeg": "https://www.pakaapparel.com/products/mens-shorts?variant=39761191206996"
+    },
+    "sweaters": {
+        "paka-sweater1.jpeg": "https://www.pakaapparel.com/products/pakacloud-fleece",
+        "paka-sweater2.jpeg": "https://www.pakaapparel.com/products/alpaca-crew",
+        "paka-sweater3.jpeg": "https://www.pakaapparel.com/products/alpaca-hoodie",
+        "paka-sweater4.jpeg": "https://www.pakaapparel.com/products/the-vida",
+        "paka-sweater5.jpeg": "https://www.pakaapparel.com/products/breathe-mens-zip-hoodie",
+        "paka-sweater6.jpeg": "https://www.pakaapparel.com/products/unisex-french-terry-crewneck",
+        "paka-sweater7.jpeg": "https://www.pakaapparel.com/products/womens-cardigan"
+    },
+    "socks": {
+        "paka-socks1.jpeg": "https://www.pakaapparel.com/products/3-4-crew-performance-socks",
+        "paka-socks2.jpeg": "https://www.pakaapparel.com/products/sebastian-ski-socks",
+        "paka-socks3.jpeg": "https://www.pakaapparel.com/products/ankle-socks-3-pack",
+        "paka-socks4.jpeg": "https://www.pakaapparel.com/products/alpaca-socks-bulk",
+        "paka-socks5.jpeg": "https://www.pakaapparel.com/products/inca-socks",
+        "paka-socks6.jpeg": "https://www.pakaapparel.com/products/mountain-socks",
+        "paka-socks7.jpeg": "https://www.pakaapparel.com/products/costa-socks",
+        "paka-socks8.jpeg": "https://www.pakaapparel.com/products/condor-socks"
+    },
+    "hats": {
+        "paka-hat1.jpeg": "https://www.pakaapparel.com/products/5-panel-hats",
+        "paka-beanie1.jpeg": "https://www.pakaapparel.com/products/heathered-charcoal-beanie"
+    },
+    "puffers": {
+        "paka-puffer1.jpeg": "https://www.pakaapparel.com/products/mens-apu-lightweight-puffer",
+        "paka-puffer2.jpeg": "https://www.pakaapparel.com/products/mens-pakafill-lightweight-puffer"
+    },
+    "briefs": {
+        "paka-briefs1.jpeg": "https://www.pakaapparel.com/products/mens-alpaca-underwear"
+    }
+}
