@@ -22,14 +22,15 @@ collection = db.data
 
 img2vec = Img2Vec()
 
-folder_path = "./img2vec/testimages"
+folder_path = "../img2vec/testimages"
 image_files = os.listdir(folder_path)
 
 for img_file in image_files:
     img_path = os.path.join(folder_path, img_file)
     image = img2vec.load_image(img_path)
     image_embedding = img2vec.get_image_embedding(image)
-    collection.insert_one({"image_embedding": image_embedding.flatten().tolist(), "image_name": img_file, "company_name" : "test", "imageBase64" : "test"})
+    image_base64 = img2vec.convert_base64(img_path)
+    collection.insert_one({"image_embedding": image_embedding.flatten().tolist(), "image_name": img_file, "company_name" : "Paka", "imageBase64" : image_base64})
 
 # Getting top 2 similar images from db
 

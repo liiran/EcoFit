@@ -3,6 +3,7 @@ from keras.api.applications.vgg19 import VGG19, preprocess_input
 from sklearn.metrics.pairwise import cosine_similarity
 import numpy as np
 import os
+import base64
 
 class Img2Vec:
 
@@ -56,6 +57,13 @@ class Img2Vec:
     """
     similarity_score = cosine_similarity(embedding1, embedding2)
     return similarity_score
+
+  def convert_base64(self, image_path):
+    """
+    Convert image to base64 encoding
+    """
+    with open(image_path, "rb") as image_file:
+        return base64.b64encode(image_file.read()).decode('utf-8')
 
 # *************************************************************************************
 
