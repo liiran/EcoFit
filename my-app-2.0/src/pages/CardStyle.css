@@ -1,0 +1,22 @@
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f3f3f3; /* Updated background color */
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.card-img {
+  width: 50%;
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Ensures the image covers the allotted area without stretching */
+}
+
+.card-text {
+  width: 50%;
+  padding: 0 15px;
+  text-align: left;
+  font-size: 1rem;
+  color: #333;
+}

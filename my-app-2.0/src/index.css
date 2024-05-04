@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+  background-color: #f3f3f3;
+}
+
+
+/* Google chrome */
+@-webkit-keyframes toWhite {
+  40% {
+    stroke-dashoffset: 0;
+    fill: transparent;
+  }
+  60% {
+    stroke-dashoffset: 0;
+    fill: #f3f3f3;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    fill: #f3f3f3;
+  }
+}
+
+@-webkit-keyframes toGreen {
+  0%,100% {
+    fill: #abbd95; /* Updated color */
+  }
+}
+
+/* Most browsers */
+@keyframes toWhite {
+  40% {
+    stroke-dashoffset: 0;
+    fill: transparent;
+  }
+  60% {
+    stroke-dashoffset: 0;
+    fill: #f3f3f3;
+  }
+  70%,100% {
+    stroke-dashoffset: 0;
+    fill: #f3f3f3;
+    
+    
+  }
+}
+
+@keyframes toGreen {
+  0%,100% {
+    fill: #abbd95; /* Updated color */
+  }
+}
+
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
