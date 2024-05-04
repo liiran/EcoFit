@@ -1,6 +1,7 @@
-import { motion } from 'framer-motion'
 import { useEffect, useState } from 'react'
 import "../index.css"
+import Skeleton from 'react-loading-skeleton'
+import 'react-loading-skeleton/dist/skeleton.css'
 
 import ImageInput from './components/ImageInput'
 import DisplayClothes from './components/DisplayClothes'
@@ -18,13 +19,10 @@ const Tool = () => {
     
     return (
         <>
-          
-        <div className='Tool'>
-            <div style={{ height: '50px'}}></div>
-            <ImageInput onImageInput={handleImageInput} />
-            <DisplayClothes />
+        <div>
+            <ImageInput onImageInput={handleImageInput}/>
+            <h1> {isImageInputted && <DisplayClothes/>} </h1>
         </div>
-
         </>
       );
 }
