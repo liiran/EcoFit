@@ -14,7 +14,7 @@ const NavBar = () => {
         <div className={navClass}>
             {!isRoot && (
                 <div className="nav-logo">
-                    <img src={ecoFitLogo} alt="EcoFit" style={{ position: 'absolute', top: '-105.5%', left: '50%', transform: 'translateX(-37.5%)', zIndex: 6 }} />
+                    <img src={ecoFitLogo} alt="EcoFit" style={{ position: 'absolute', top: '-22%', left: '50.85%', transform: 'translateX(-50%) scale(0.85)', zIndex: 6}} />
                 </div>
             )}
             <div style={{ position: 'relative' }}> {/* Parent container with relative positioning */}
