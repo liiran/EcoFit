@@ -1,0 +1,38 @@
+import { useLocation, Link } from 'react-router-dom'
+import "../../index.css"
+import ecoFitLogo from '../../assets/ecofit.svg'
+
+const NavBar = () => {
+    const location = useLocation();
+    const isRoot = location.pathname === '/'
+
+    // Assign different CSS classes based on whether it is the root or not
+    const navClass = isRoot ? "NavBar animate" : "NavBar final"
+    const buttonClass = isRoot ? "nav-button animate" : "nav-button final"
+
+    return (
+        <div className={navClass}>
+            {!isRoot && (
+                <div className="nav-logo">
+                    <img src={ecoFitLogo} alt="EcoFit" style={{ position: 'absolute', top: '-105.5%', left: '50%', transform: 'translateX(-37.5%)', zIndex: 6 }} />
+                </div>
+            )}
+            <div style={{ position: 'relative' }}> {/* Parent container with relative positioning */}
+                <Link to="/home">
+                    <button className={buttonClass} style={{ position: 'absolute', left: '20vw' }}>Home</button>
+                </Link>
+                <Link to="/criteria">
+                    <button className={buttonClass} style={{ position: 'absolute', left: '10vw' }}>Criteria</button>
+                </Link>
+                <Link to="/tool">
+                    <button className={buttonClass} style={{ position: 'absolute', left: '43vw' }}>Tools</button>
+                </Link>
+                <Link to="/about">
+                    <button className={buttonClass} style={{ position: 'absolute', left: '53vw' }}>About Us</button>
+                </Link>
+            </div>
+        </div>
+    );
+}
+
+export default NavBar

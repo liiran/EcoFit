@@ -7,6 +7,8 @@ import { easing } from 'maath'
 import styled from 'styled-components'
 import '../assets/util'
 import '../assets/popup.css'
+import './CardStyle.css'
+import NavBar from './components/NavBar'
 
 
 //handles the rotation of the carousel based on scroll interaction
@@ -16,7 +18,7 @@ function Rig(props) {
     useFrame((state, delta) => {
         ref.current.rotation.y = -scroll.offset * (Math.PI * 2) // Rotate the contents full circle based on scroll offset
         state.events.update()
-        easing.damp3(state.camera.position, [8, state.pointer.y + 0.02, 5], 0, delta) 
+        easing.damp3(state.camera.position, [8, (state.pointer.y + 0.02)*0.5, 5], 0, delta) 
         state.camera.lookAt(0, 0, 0) // Always look at the center
     })
     return <group ref={ref} {...props} />
@@ -41,13 +43,13 @@ function Card({ url, onClick, ...props }) {
     const [hovered, hover] = useState(false)
 
     const pointerOver = (e) => {
-        e.stopPropagation()
+        e.stopPropagation() //stops triggering of parent elements
         hover(true)
     }
     const pointerOut = () => hover(false)
 
     const handleClick = (e) => {
-        e.stopPropagation()
+        e.stopPropagation() //stops triggering of parent elements
         onClick()
     }
 
@@ -71,7 +73,7 @@ function renderButton(index,messages) {
       return null;
     } else {
       return (
-        <button onClick={() => window.open(links[index], '_blank')} className="learn-more-btn">
+        <button onClick={() => window.open(links[index], '_blank')} className="learn-more-btn" >
           Learn More
         </button>
       );
@@ -83,11 +85,11 @@ const Criteria = () => {
     const [showPopup, setShowPopup] = useState(false)
     const [clickedIndex, setClickedIndex] = useState(null)
     const messages = [
-        <><img src="./img1_.png" alt="Global Organic Textile Standard" style={{ width: '200px', display: 'block', margin: '0 auto', transform: 'scaleX(-1)' }} /><p>The Global Organic Textile Standard (GOTS) is a comprehensive certification for textiles made from organic fibers, ensuring they meet stringent ecological and social criteria throughout the entire supply chain. It covers every step of the production process, from the harvesting of raw materials to responsible manufacturing and labeling, providing a credible assurance of organic quality to consumers. GOTS certification helps in maintaining a transparent, sustainable, and ethical fashion industry by setting a globally recognized benchmark for organic textiles.</p></>,
+        <><img src="./img1_.png" alt="Global Organic Textile Standard" style={{ width: '200px', display: 'block', margin: '0 auto', transform: 'scaleX(-1)' }} /><p>The Global Organic Textile Standard (GOTS) is a comprehensive certification for textiles made from organic fibers. It covers every step of the production process, from the harvesting of raw materials to responsible manufacturing and labeling. GOTS certification helps in maintaining a transparent, sustainable, and ethical fashion industry by setting a globally recognized benchmark for textiles.</p></>,
         <><img src="./img2_.png" alt="Criteria" style={{ width: '200px', display: 'block', margin: '0 auto', transform: 'scaleX(-1)' }} /><p>In today's world, with the rise of fast fashion companies such as "Shein" and "H&M", many people are substituting the environment and safe work conditions for cost and efficiency. According to Earth.org (2023), 92 million tonnes of textile waste is produced every year. That is equivalent to a garbage truck full of clothes ending up in landfills every second.  Our criteria uses multiple different metrics to combat such practices by promoting sustainable companies. We compiled a list of both ethical and environmentally friendly companies using various criterion and certifications.  Here is the list of certifications that we use to filter companies. </p></>,
-        <><img src="./img3_.png" alt="OEKO-TEX" style={{ width: '200px', display: 'block', margin: '0 auto', transform: 'scaleX(-1)' }} /><p>The OEKO-TEX Standard 100 is a globally recognized certification for textiles and materials. It sets the benchmark for textile safety, from yarn to finished product, ensuring that every item bearing the Standard 100 label is certified as having passed safety tests for the presence of harmful substances. This certification promotes health and safety by ensuring that OEKO-TEX-certified products are free from harmful chemicals, making them safe for both you and the environment..</p></>,
+        <><img src="./img3_.png" alt="OEKO-TEX" style={{ width: '200px', display: 'block', margin: '0 auto', transform: 'scaleX(-1)' }} /><p>The OEKO-TEX Standard 100 is a globally recognized certification for textiles and materials. It sets the benchmark for textile safety, from yarn to finished product, ensuring that every item bearing the Standard 100 label is certified as having passed safety tests for the presence of harmful substances.</p></>,
         <><img src="./img4_.png" alt="Fair Trade" style={{ width: '200px', display: 'block', margin: '0 auto', transform: 'scaleX(-1)' }} /><p>Fair Trade is a trading partnership, based on dialogue, transparency, and respect, that seeks greater equity in international trade. It contributes to sustainable development by offering better trading conditions to, and securing the rights of, marginalized producers and workers.</p></>,
-        <><img src="./img5_.png" alt="B Corp" style={{ width: '200px', display: 'block', margin: '0 auto', transform: 'scaleX(-1)' }} /><p>B Corp, is a for-profit corporation that is certified by B Lab for its social impact. B Corp certification is conferred by B Lab, a global non-profit organization, and it signifies that the company has voluntarily met the highest standards for social and environmental performance. This certification is officially recognized in most states of the U.S., and it operates for the benefit of stakeholders such as employees and the larger community rather than simply for its shareholders.</p></>,
+        <><img src="./img5_.png" alt="B Corp" style={{ width: '200px', display: 'block', margin: '0 auto', transform: 'scaleX(-1)' }} /><p>B Corp, is a for-profit corporation that is certified by B Lab for its social impact. B Corp certification is conferred by B Lab, a global non-profit organization, and it signifies that the company has voluntarily met the highest standards for social and environmental performance.</p></>,
         <><img src="./img6_.png" alt="Forest Stewardship Council" style={{ width: '200px', display: 'block', margin: '0 auto', transform: 'scaleX(-1)' }} /><p>The Forest Stewardship Council (FSC) promotes environmentally sound, socially beneficial, and economically prosperous management of the world's forests. Its certification ensures that products come from responsibly managed forests that provide environmental, social, and economic benefits.</p></>,
         <><img src="./img7_.png" alt="Recycled Materials" style={{ width: '200px', display: 'block', margin: '0 auto', transform: 'scaleX(-1)' }} /><p>In the fashion industry, recycled materials involve reprocessing textile waste and old garments into new fabrics. This approach significantly reduces waste and resource consumption, lowering the environmental impact associated with raw material extraction and processing.</p></>,
         <><img src="./img8_.png" alt="Natural Materials" style={{ width: '200px', display: 'block', margin: '0 auto', transform: 'scaleX(-1)' }} /><p>In fashion, natural materials like organic cotton, wool, and silk are sourced directly from nature and minimally processed. These materials are prized not only for their low environmental impact but also for their breathability, durability, and biodegradability in apparel.</p></>,
@@ -124,7 +126,8 @@ const Criteria = () => {
                     </div>
                 </>
             )}
-            <Canvas style={{ width: "100vw", height: "100vh" }} camera={{ position: [0, 0, 100], fov: 15 }}>
+            <NavBar />
+            <Canvas style={{top:50, width: "100vw", height: "70vh" }} camera={{ position: [0, 0, 100], fov: 10 }}>
                 <fog attach="fog" args={['#a79', 8.5, 12]} />
                 <ScrollControls pages={4} damping={0.5} infinite>
                     <Rig rotation={[0, 0, 0]}>
@@ -132,6 +135,9 @@ const Criteria = () => {
                     </Rig>
                 </ScrollControls>
             </Canvas>
+            <div className= "ScrollText" >
+                <p style={{textAlign:"center",}}>Scroll to rotate the carousel. Click on a card to learn more.</p>
+            </div>
         </>
     )
 }

@@ -60,3 +60,63 @@ section {
   justify-content: center;
   align-items: center;
 }
+
+.NavBar {
+  height: 12vh;
+  width: 66.67%; 
+  margin: 0 auto; 
+  position: relative;
+  overflow: hidden;
+  z-index: 4;
+}
+
+.NavBar.animate::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 1px;
+  background-color: #706f6f;
+  animation: growBorder 0.5s ease-out 3.5s forwards;
+}
+
+.NavBar.final {
+  border-bottom: 1px solid #706f6f;
+}
+
+@keyframes growBorder {
+  from {
+    width: 0;
+    left: 50%;
+  }
+  to {
+    width: 100%;
+    left: 0;
+  }
+}
+
+
+
+.nav-button.animate {
+  opacity: 0;
+  transform: translateY(0vh);
+  animation: fadeButton 1s ease-in-out 4s forwards; /* Add 'forwards' to maintain final state */
+}
+
+.nav-button.final {
+  opacity: 1;
+  transform: translateY(7vh);
+}
+
+
+@keyframes fadeButton {
+  from {
+    opacity: 0;
+    transform: translateY(-7vh);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(7vh);
+  }
+}

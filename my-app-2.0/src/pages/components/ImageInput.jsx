@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function ImageInput({ onImageInput }) {
+const ImageInput = ({ onImageInput }) => {
   const [image, setImage] = useState(null);
 
   const handleImageChange = (e) => {
