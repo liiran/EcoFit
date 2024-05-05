@@ -15,7 +15,6 @@ const Tool = () => {
         setIsImageInputted(true);
         console.log("Image is Inputted")
     };
-
     
     return (
         <>

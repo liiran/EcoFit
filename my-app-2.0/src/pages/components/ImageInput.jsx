@@ -2,14 +2,48 @@ import React, { useState, useRef } from 'react';
 
 function ImageInput({ onImageInput }) {
   const [image, setImage] = useState(null);
-  const [uploadOption, setUploadOption] = useState('pc'); // Set initial state to 'pc'  
+  const [uploadOption, setUploadOption] = useState('pc');
   const videoRef = useRef(null);
 
-  const handleImageChange = (e) => {
+  const handleImageChange = async (e) => {
     const file = e.target.files[0];
-    setImage(URL.createObjectURL(file));
-    // Call the onImageInput callback with true to indicate an image is inputted
-    onImageInput(true);
+    const reader = new FileReader();
+    
+    reader.onload = async () => {
+      const base64Image = reader.result;
+      
+      const base64ImageWithoutPrefix = base64Image.split(',')[1];
+    
+      setImage(base64ImageWithoutPrefix);
+      console.log(base64ImageWithoutPrefix);
+      
+      // Call the onImageInput callback with true to indicate an image is inputted
+      onImageInput(true);
+
+      // Send the base64Image to the backend
+      try {
+        const response = await fetch('http://127.0.0.1:5000/get_sustainable_alternatives', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ base64image: base64Image }),
+        });
+        
+        // Handle response from the backend
+        if (response.ok) {
+          // Image successfully sent to the backend
+          console.log('Image sent to backend successfully');
+        } else {
+          // Error occurred while sending image to the backend
+          console.error('Error sending image to backend');
+        }
+      } catch (error) {
+        console.error('Error:', error);
+      }
+    };
+    
+    reader.readAsDataURL(file);
   };
 
   const handleUploadOptionChange = (option) => {
