@@ -30,8 +30,8 @@ function DisplayClothes({responseData}) {
     <div className="p-4">
       <div className="grid grid-cols-4 gap-4 justify-items-center">
         {clothes.map((cloth, index) => (
+          <Link to={itemLinks[index]} target="_blank" rel="noopener noreferrer" className="w-full">
           <div key={index} style={{width:'300px', height:'600px'}} 
-          <Link to={itemLinks[index]} key={index} className="w-full">
             className="bg-white rounded-lg flex flex-col text-center hover:border hover:rounded-none transition-all">
             <img src={cloth} alt={`Cloth ${index}`} 
               className="object-contain rounded-t-lg hover:rounded-none transition-all"
@@ -51,8 +51,8 @@ function DisplayClothes({responseData}) {
                 </Link>
               ))}
             </div>
-            </Link>
           </div>
+          </Link>
         ))}
       </div>
     </div>
