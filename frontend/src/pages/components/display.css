@@ -1,0 +1,19 @@
+.slick-slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .slick-slide > div {
+    margin: 0px 10px; /* Adjust space between slides */
+    margin-left: 50px;
+
+  }
+  
+  .slick-list {
+    padding: 0 !important; /* Override any padding that affects centering */
+  }
+  
+  .slick-arrow {
+    background: none !important; /* Removes any default styling that might be adding extra images */
+  }
