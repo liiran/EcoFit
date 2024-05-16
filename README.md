@@ -1,14 +1,14 @@
-[<img src="images/Banner.jpeg" width="100%" height="auto"/>](images/Banner.jpeg)
+[<img src="images/banner.png" width="98.5%%" height="auto"/>](images/banner.png)
 # EcoFit
 `EcoFit` is inspired by the fashion industry’s deep-rooted issues—its environmental toll and unethical labor practices. Founded by Carsten, Dev, Liran, and Tanveer, `EcoFit` was created as a beacon of awareness against the unethical and unsustainable practices rampant in fast fashion giants like Shein, YesStyle, and H&M. The fashion industry's alarming production of 92 million tonnes of textile waste in 2020 underscored the need for a radical change. By emphasizing slow fashion, `EcoFit` aims to shift consumer behavior from mindless consumption to conscious, ethical purchasing. Our platform enables users to enjoy fashion without compromising the health of our planet or the rights of its people. This pivotal shift not only furthers environmental sustainability but also bolsters fair labor practices, driving substantial improvements in global ecological and ethical standards.
 
 <p>
-  <img src="images/browse.gif" alt="Clothing Tool " width="1472px">
+  <img src="images/browse.gif" alt="Clothing Tool " width="98.5%">
 </p
 
-[<img src="images/homemenu.png" width="735" height="auto"/>](images/homemenu.png) [<img src="images/homemenu2.png" width="735" height="auto"/>](images/homemenu2.png)
-[<img src="images/tool.png" width="735" height="auto"/>](images/tool.png) [<img src="images/tool2.png" width= "735" height="397px"/>](images/tool2.png)
-[<img src="images/badges.png" width="735" height="auto"/>](images/badges.png) [<img src="images/badges2.png" width="735" height="397px"/>](images/badges2.png)
+[<img src="images/homemenu.png" width="405" height="auto"/>](images/homemenu.png) [<img src="images/homemenu2.png" width="405" height="auto"/>](images/homemenu2.png)
+[<img src="images/tool.png" width="405" height="auto"/>](images/tool.png) [<img src="images/tool2.png" width= "405" height="397px"/>](images/tool2.png)
+[<img src="images/badges.png" width="405" height="auto"/>](images/badges.png) [<img src="images/badges2.png" width="405" height="397px"/>](images/badges2.png)
 
 
 ## How to Use
